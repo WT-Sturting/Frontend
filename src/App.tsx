@@ -1,5 +1,6 @@
 import "./styles/global.css";
-
+import { Routes, Route } from "react-router-dom";
+import Join from "./pages/join";
 function App() {
   return (
     <Routes>
