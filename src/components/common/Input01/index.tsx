@@ -10,6 +10,7 @@ interface PropsInput01 {
   placeholder?: string;
   padding?: string;
   margin?: string;
+  value?: any;
 }
 
 const CommonInput01 = styled.input<PropsInput01>`
@@ -32,6 +33,7 @@ export default function Input01(props: PropsInput01) {
         placeholder={props.placeholder}
         margin={props.margin}
         padding={props.padding}
+        value={props.value}
       />
     </>
   );
