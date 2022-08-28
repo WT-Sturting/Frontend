@@ -63,7 +63,7 @@ const SearchInputWrap = styled.div`
     font-weight: 700;
     border: 0px;
     border-radius: 2px;
-    background-color: rgb(50, 108, 249);
+    background-color: #1dc078;
   }
 
   .btn2 {
