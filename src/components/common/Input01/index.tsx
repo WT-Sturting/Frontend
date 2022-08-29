@@ -15,6 +15,7 @@ interface PropsInput01 {
   type?: HTMLInputTypeAttribute;
   refs?: any;
   border?: string;
+  value?: any;
 }
 
 const CommonInput01 = styled.input<PropsInput01>`
@@ -38,11 +39,13 @@ export default function Input01(props: PropsInput01) {
         placeholder={props.placeholder}
         margin={props.margin}
         padding={props.padding}
+        feature-ek-login
         name={props.name}
         onChange={props.onChange}
         type={props.type}
         ref={props.refs}
         border={props.border}
+        value={props.value}
       />
     </>
   );
