@@ -1,3 +1,4 @@
+import { ChangeEvent, HTMLInputTypeAttribute } from "react";
 import styled from "styled-components";
 
 interface PropsInput01 {
@@ -5,11 +6,15 @@ interface PropsInput01 {
   height?: string;
   borderRadius?: string;
   color?: string;
-  onChange?: () => void;
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   fontSize?: string;
   placeholder?: string;
   padding?: string;
   margin?: string;
+  name?: string;
+  type?: HTMLInputTypeAttribute;
+  refs?: any;
+  border?: string;
   value?: any;
 }
 
@@ -20,6 +25,7 @@ const CommonInput01 = styled.input<PropsInput01>`
   font-size: ${(props) => props.fontSize};
   padding: ${(props) => props.padding};
   margin: ${(props) => props.margin};
+  border: ${(props) => props.border};
 `;
 
 export default function Input01(props: PropsInput01) {
@@ -33,6 +39,12 @@ export default function Input01(props: PropsInput01) {
         placeholder={props.placeholder}
         margin={props.margin}
         padding={props.padding}
+        feature-ek-login
+        name={props.name}
+        onChange={props.onChange}
+        type={props.type}
+        ref={props.refs}
+        border={props.border}
         value={props.value}
       />
     </>
