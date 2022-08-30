@@ -2,6 +2,8 @@ import * as S from "./footer-css";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import Members from "./members/members";
+import { Tooltip } from "antd";
+import "antd/dist/antd.css";
 
 export default function Footer() {
   const [main, setMain] = useState<boolean>(true);
@@ -36,9 +38,11 @@ export default function Footer() {
             {"(토요일, 일요일, 공휴일 휴무)"}
           </S.LunchInfo>
           <S.LocationBased>위치기반 서비스</S.LocationBased>
-          <S.GithubLink target='blank' href='https://github.com/WT-Sturting'>
-            Move to Github link
-          </S.GithubLink>
+          <Tooltip title={"https://github.com/WT-Sturting"}>
+            <S.GithubLink target='blank' href='https://github.com/WT-Sturting'>
+              Move to Github link
+            </S.GithubLink>
+          </Tooltip>
           <br />
           <S.CopyRight>Sturting. All rights reserved</S.CopyRight>
         </>

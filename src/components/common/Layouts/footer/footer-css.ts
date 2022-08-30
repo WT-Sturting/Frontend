@@ -52,7 +52,7 @@ export const Members = styled.label`
 export const Title = styled.h1`
   color: #1dc078;
   width: 240px;
-  padding-left: 16px;
+  padding: 16px;
 `;
 
 export const Address = styled.p`
@@ -79,7 +79,8 @@ export const GithubLink = styled.a`
   }
 `;
 
-export const CopyRight = styled.label`
+export const CopyRight = styled.p`
   font-size: 12px;
   padding-left: 16px;
+  padding: 8px 0px 0px 16px;
 `;
