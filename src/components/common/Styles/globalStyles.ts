@@ -3,6 +3,8 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
     * {
         box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
 
     body {
@@ -16,5 +18,20 @@ const GlobalStyles = createGlobalStyle`
         color: inherit;
         text-decoration: none;
     }
+
+   
+    ol,
+    ul {
+    list-style: none;
+    }
+    input {
+    border: none;
+    outline: none;
+    }
+    button {
+    border: none;
+    background: transparent;
+}
+
 `;
 export default GlobalStyles;
