@@ -1,4 +1,6 @@
 import styled, { keyframes } from "styled-components";
+import { Tooltip } from "antd";
+import "antd/dist/antd.css";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -52,30 +54,38 @@ export default function Members() {
         <Title>{"프론트엔드 맴버 (Frontend)"}: </Title>
         <NamesWrapper>
           <Names>김은국:</Names>
-          <GithubLinks target='blank' href='https://github.com/ekiankim92'>
-            Github Link
-          </GithubLinks>
+          <Tooltip title={"https://github.com/ekiankim92"}>
+            <GithubLinks target='blank' href='https://github.com/ekiankim92'>
+              Github Link
+            </GithubLinks>
+          </Tooltip>
         </NamesWrapper>
         <NamesWrapper>
           <Names>박준영:</Names>
-          <GithubLinks target='blank' href='https://github.com/LOCA525'>
-            Github Link
-          </GithubLinks>
+          <Tooltip title={"https://github.com/LOCA525"}>
+            <GithubLinks target='blank' href='https://github.com/LOCA525'>
+              Github Link
+            </GithubLinks>
+          </Tooltip>
         </NamesWrapper>
       </FrontendWrapper>
       <BackendWrapper>
         <Title>{"벡엔드 맴버 (Backend)"}: </Title>
         <NamesWrapper>
           <Names>김재준:</Names>
-          <GithubLinks target='blank' href='https://github.com/xi-jjun'>
-            Github Link
-          </GithubLinks>
+          <Tooltip title={"https://github.com/xi-jjun"}>
+            <GithubLinks target='blank' href='https://github.com/xi-jjun'>
+              Github Link
+            </GithubLinks>
+          </Tooltip>
         </NamesWrapper>
         <NamesWrapper>
           <Names>이다은:</Names>
-          <GithubLinks target='blank' href='https://github.com/llynn97'>
-            Github Link
-          </GithubLinks>
+          <Tooltip title={"https://github.com/llynn97"}>
+            <GithubLinks target='blank' href='https://github.com/llynn97'>
+              Github Link
+            </GithubLinks>
+          </Tooltip>
         </NamesWrapper>
       </BackendWrapper>
     </Wrapper>
