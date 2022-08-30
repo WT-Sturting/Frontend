@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
+import Header from "./Header";
 
 interface LayoutProps {
   children: ReactNode;
@@ -16,6 +17,7 @@ const Body = styled.div`
 export default function Layout(props: LayoutProps) {
   return (
     <>
+      <Header />
       <Wrapper>
         <Body>{props.children}</Body>
       </Wrapper>
