@@ -38,7 +38,6 @@ const JoinBox = styled.div`
   flex-direction: column;
   border: 1px solid rgb(245, 245, 245);
   width: 588px;
-  height: 723px;
   padding: 64px;
   margin: 0 auto;
 
@@ -88,6 +87,7 @@ const JoinBox = styled.div`
     color: #fff;
     font-size: 14px;
     background-color: #1dc078;
+    margin-top: 32px;
   }
 `;
 export default Join;
