@@ -1,4 +1,10 @@
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+interface PropsTabs {
+  main?: boolean;
+  members?: boolean;
+}
 
 export const Wrapper = styled.footer`
   background: #303740;
@@ -18,25 +24,62 @@ export const FooterNav = styled.nav`
 
 export const Intro = styled.label`
   font-weight: 700;
-  width: 160px;
+  width: 120px;
   text-align: center;
-  background: lightyellow;
+  :hover {
+    cursor: pointer;
+    opacity: 0.65;
+  }
+`;
+
+export const Icon = styled(FontAwesomeIcon)`
+  width: 8px;
+  height: 8px;
 `;
 
 export const Members = styled.label`
   font-weight: 700;
-  width: 160px;
+  width: 100px;
   text-align: center;
-  background: lightblue;
+  :hover {
+    cursor: pointer;
+    opacity: 0.65;
+  }
+  text-decoration: ${(props: PropsTabs) =>
+    props.members ? "underline" : "none"};
 `;
 
 export const Title = styled.h1`
   color: #1dc078;
   width: 240px;
-  /* padding: 32px 0px 0px 40px; */
-  background: lightyellow;
+  padding-left: 16px;
+`;
+
+export const Address = styled.p`
+  font-size: 12px;
+  padding-left: 16px;
+`;
+
+export const LunchInfo = styled.p`
+  font-size: 12px;
+  padding-left: 16px;
+`;
+
+export const LocationBased = styled.p`
+  font-size: 12px;
+  padding-left: 16px;
+`;
+
+export const GithubLink = styled.a`
+  font-size: 12px;
+  padding-left: 16px;
+  :hover {
+    cursor: pointer;
+    opacity: 0.65;
+  }
 `;
 
 export const CopyRight = styled.label`
   font-size: 12px;
+  padding-left: 16px;
 `;
