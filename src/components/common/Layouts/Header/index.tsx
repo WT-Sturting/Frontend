@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <HeaderWrap>
       <div className='title'>
@@ -8,13 +10,24 @@ const Header = () => {
       </div>
 
       <div className='menuBtn'>
-        <button>지도</button>
+        <button
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          지도
+        </button>
         <button>관심목록</button>
         <button>스터디생성</button>
         <button>알림</button>
       </div>
 
-      <div className='loginBtn'>
+      <div
+        className='loginBtn'
+        onClick={() => {
+          navigate("/login");
+        }}
+      >
         로그인<span></span>회원가입
       </div>
     </HeaderWrap>
@@ -66,6 +79,7 @@ const HeaderWrap = styled.div`
     border: 1px solid rgb(223, 223, 223);
     border-radius: 2px;
     padding: 0px 20px;
+    cursor: pointer;
   }
 
   .loginBtn > span {
