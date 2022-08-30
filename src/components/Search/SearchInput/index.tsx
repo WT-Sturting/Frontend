@@ -23,7 +23,7 @@ const SearchInputWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0px 20px;
+  padding: 0px 20px 0 5px;
   border-right: 1px solid rgb(231, 231, 231);
   border-bottom: 1px solid rgb(205, 205, 205);
 
@@ -68,11 +68,11 @@ const SearchInputWrap = styled.div`
 
   .btn2 {
     color: rgb(174, 174, 174);
+    background-color: rgb(231, 231, 231);
     font-size: 13px;
     font-weight: 400;
     border: 0px;
     border-radius: 2px;
-    background-color: transparent;
   }
   button {
     width: 52px;
