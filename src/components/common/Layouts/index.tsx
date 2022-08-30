@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
+import Footer from "./footer/footer";
 
 interface LayoutProps {
   children: ReactNode;
@@ -19,6 +20,7 @@ export default function Layout(props: LayoutProps) {
       <Wrapper>
         <Body>{props.children}</Body>
       </Wrapper>
+      <Footer />
     </>
   );
 }
