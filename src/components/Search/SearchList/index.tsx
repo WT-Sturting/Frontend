@@ -19,7 +19,7 @@ const SearchList = () => {
 };
 const SearchListWrap = styled.ul`
   border-right: 1px solid rgb(231, 231, 231);
-  height: calc(100vh - 63px);
+  height: calc(100vh - 143px);
   width: 400px;
   overflow: scroll;
 `;
