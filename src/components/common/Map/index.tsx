@@ -18,7 +18,7 @@ const Map = () => {
       id='myMap'
       style={{
         width: "100%",
-        height: "calc(100vh-143px)",
+        height: "100%",
       }}
     ></div>
   );
