@@ -12,7 +12,7 @@ const Header = () => {
       <div className='menuBtn'>
         <button
           onClick={() => {
-            navigate("/");
+            navigate("/main");
           }}
         >
           지도
