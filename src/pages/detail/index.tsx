@@ -4,6 +4,17 @@ import Map from "../../components/common/Map";
 const Detail = () => {
   return (
     <DetailWrapper>
+      <div className='sider'>
+        <div className='siderBox'>모집중</div>
+        <div className='siderBox'>
+          <img src='/heart.png' alt='heart' />
+          관심
+        </div>
+        <div className='siderBox'>
+          <img src='chat.png' alt='' />
+          팀챗
+        </div>
+      </div>
       <div className='title'>
         <h1>함께하실분 구합니다</h1>
         <div className='subTitle'>
@@ -20,6 +31,10 @@ const Detail = () => {
         <div className='contentList'>
           <h2>참여자(참여자권한)</h2>
           <p>JY, EK, DE, JJ</p>
+        </div>
+        <div className='contentList'>
+          <h2>신청자(방장권한)</h2>
+          <p>DDoGas, alien</p>
         </div>
 
         <div className='contentList'>
@@ -58,6 +73,34 @@ const DetailWrapper = styled.div`
   margin: 0 auto;
   max-width: 750px;
   padding: 36px 32px 120px 32px;
+
+  .sider {
+    margin-top: 57px;
+    right: 200px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sider .siderBox {
+    border: #e9ecef 1px solid;
+    font-weight: 400;
+    box-shadow: 0 3px 8px 0 rgb(33 37 41 / 5%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+  }
+
+  img {
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+  }
 
   .title {
     border-bottom: 1px solid #f1f3f5;
@@ -99,7 +142,7 @@ const DetailWrapper = styled.div`
     font-weight: 700;
   }
 
-  p {
+  .contentList > p {
     flex: 1;
   }
 
