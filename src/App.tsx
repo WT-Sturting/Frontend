@@ -6,6 +6,7 @@ import Main from "./pages/main";
 import LoginPage from "./pages/login";
 import { NavigationUtil } from "./util/navigation-util";
 import Detail from "./pages/detail";
+import LandingPage from "./pages/landing";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path={NavigationUtil.login} element={<LoginPage />}></Route>
           <Route
             path={NavigationUtil.landing}
-            element={<div>랜딩페이지</div>}
+            element={<LandingPage />}
           ></Route>
           <Route path={NavigationUtil.main} element={<Main />}></Route>
           <Route path={NavigationUtil.detail} element={<Detail />}></Route>
