@@ -6,6 +6,7 @@ import Main from "./pages/main";
 import LoginPage from "./pages/login";
 import { NavigationUtil } from "./util/navigation-util";
 import Detail from "./pages/detail";
+import HomePage from "./pages/homepage";
 import LandingPage from "./pages/landing";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             path={NavigationUtil.landing}
             element={<LandingPage />}
           ></Route>
+          <Route path={NavigationUtil.homePage} element={<HomePage />}></Route>
           <Route path={NavigationUtil.main} element={<Main />}></Route>
           <Route path={NavigationUtil.detail} element={<Detail />}></Route>
         </Routes>
