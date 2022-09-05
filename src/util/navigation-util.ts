@@ -1,7 +1,8 @@
 export const NavigationUtil = {
   login: "/login",
   register: "/join",
-  landing: "/",
+  homePage: "/",
   main: "/main",
   detail: "/detail",
+  landing: "/landing",
 };
