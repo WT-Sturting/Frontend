@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { useMatch } from "react-router";
 import styled from "styled-components";
 import Footer from "./footer/footer";
 import Header from "./Header/index";
@@ -16,13 +17,15 @@ const Body = styled.div`
 `;
 
 export default function Layout(props: LayoutProps) {
+  const isShow = useMatch("/");
+
   return (
     <>
-      <Header />
+      {!isShow && <Header />}
       <Wrapper>
         <Body>{props.children}</Body>
       </Wrapper>
-      <Footer />
+      {!isShow && <Footer />}
     </>
   );
 }

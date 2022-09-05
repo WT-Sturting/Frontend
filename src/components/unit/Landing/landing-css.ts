@@ -115,6 +115,7 @@ export const OnlineWrapper = styled.div`
   border-radius: 8px;
   box-shadow: 4px 8px 18px #1dc078;
   :hover {
+    cursor: pointer;
     background: #1dc078;
     transition: all 0.4s linear;
     box-shadow: none;
@@ -158,6 +159,7 @@ export const OfflineWrapper = styled.div`
   border-radius: 8px;
   box-shadow: 4px 8px 18px #1dc078;
   :hover {
+    cursor: pointer;
     background: #1dc078;
     transition: all 0.4s linear;
     box-shadow: none;

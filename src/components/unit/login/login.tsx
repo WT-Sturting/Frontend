@@ -2,8 +2,12 @@ import * as S from "./login-css";
 import Input01 from "../../common/Input01";
 import Button01 from "../../common/Button01";
 import { ChangeEvent, useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router";
+import { NavigationUtil } from "../../../util/navigation-util";
 
 export default function Login() {
+  const navigate = useNavigate();
+
   const [inputs, setInputs] = useState({
     userId: "",
     password: "",
@@ -27,6 +31,10 @@ export default function Login() {
       IdRef.current.focus();
     }
   }, []);
+
+  const onClickRegister = () => {
+    navigate(NavigationUtil.register);
+  };
 
   return (
     <S.Container>
@@ -63,7 +71,9 @@ export default function Login() {
             <S.IdSaveLabel>아이디 저장</S.IdSaveLabel>
           </S.IdSaveWrapper>
           <S.RegisterWrapper>
-            <S.RegisterLabel>회원가입</S.RegisterLabel>
+            <S.RegisterLabel onClick={onClickRegister}>
+              회원가입
+            </S.RegisterLabel>
             <S.Line>|</S.Line>
             <S.ResetPassword>비밀번호 재설정</S.ResetPassword>
           </S.RegisterWrapper>
