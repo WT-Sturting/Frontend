@@ -5,13 +5,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useState, WheelEvent } from "react";
 import _ from "lodash";
+import { useNavigate } from "react-router";
+import { NavigationUtil } from "../../../util/navigation-util";
 
 export default function Home() {
   const [isOnOff, setIsOnOff] = useState<boolean>(false);
   const [isBack, setIsBack] = useState<boolean>(false);
 
+  const navigate = useNavigate();
+
   const onWheelEvent = _.debounce((event: WheelEvent<HTMLElement>) => {
-    console.log("event.wheelDelta:", event.deltaY);
     if (event.deltaY !== 0) {
       setIsOnOff((prev) => !prev);
     }
@@ -19,6 +22,10 @@ export default function Home() {
 
   const onMouseEvent = () => {
     setIsBack((prev) => !prev);
+  };
+
+  const onClickEnter = () => {
+    navigate(NavigationUtil.landing);
   };
 
   return (
@@ -57,7 +64,7 @@ export default function Home() {
                 </S.BulletListWrapper>
               </>
             )}
-            <S.EnterWrapper>
+            <S.EnterWrapper onClick={onClickEnter}>
               <S.EnterInnerWrapper
                 onMouseEnter={onMouseEvent}
                 onMouseLeave={onMouseEvent}
