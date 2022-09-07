@@ -98,7 +98,7 @@ const Bounce = keyframes`
     50% {
         bottom: 30px;
     }
-}
+
 `;
 
 export const OnlineTitleKr = styled.div`
