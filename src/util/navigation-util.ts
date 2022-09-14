@@ -5,4 +5,5 @@ export const NavigationUtil = {
   main: "/main",
   detail: "/detail",
   landing: "/landing",
+  mypage: "/mypage",
 };
